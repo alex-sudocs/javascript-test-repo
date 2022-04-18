@@ -1,0 +1,36 @@
+functions:
+  create:
+    handler: ../endpoints/notes/create.handler
+    events:
+      - http:
+          path: notes
+          method: post
+          cors: true
+  getOne:
+    handler: ../endpoints/notes/getOne.handler
+    events:
+      - http:
+          path: notes/{id}
+          method: get
+          cors: true
+  getAll:
+    handler: ../endpoints/notes/getAll.handler
+    events:
+      - http:
+          path: notes
+          method: get
+          cors: true
+  update:
+    handler: ../endpoints/notes/update.handler
+    events:
+      - http:
+          path: notes/{id}
+          method: put
+          cors: true
+  delete:
+    handler: ../endpoints/notes/delete.handler
+    events:
+      - http:
+          path: notes/{id}
+          method: delete
+          cors: true

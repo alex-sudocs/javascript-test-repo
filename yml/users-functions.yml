@@ -1,0 +1,22 @@
+functions:
+  create:
+    handler: ../endpoints/users/create.handler
+    events:
+      - http:
+          path: users
+          method: post
+          cors: true
+  update:
+    handler: ../endpoints/users/update.handler
+    events:
+      - http:
+          path: users/{id}
+          method: put
+          cors: true
+  delete:
+    handler: ../endpoints/users/delete.handler
+    events:
+      - http:
+          path: users/{id}
+          method: delete
+          cors: true
